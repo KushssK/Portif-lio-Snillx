@@ -19,31 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const contactForm = document.querySelector('.contact-form form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const submitBtn = this.querySelector('.submit-btn');
-            const originalText = submitBtn.textContent;
-            
-            submitBtn.textContent = 'Enviando...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                submitBtn.textContent = 'Mensagem Enviada!';
-                submitBtn.style.background = '#28a745';
-                
-                this.reset();
-                
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = '';
-                }, 2000);
-            }, 1500);
-        });
-    }
 
     const observerOptions = {
         threshold: 0.1,
