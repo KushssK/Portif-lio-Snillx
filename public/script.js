@@ -2,12 +2,67 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initSmoothScrolling();
     initScrollAnimations();
-    initTypewriter();
     initParallax();
     initMobileMenu();
     initCardHoverEffects();
     showLoading();
+
+    // ====== HERO NAME ======
+    const heroNames = ["Nilson", "Snillx"];
+    const heroName = document.getElementById("hero-name");
+
+    if (heroName) {
+        heroName.textContent = ""; // garante que comece vazio
+        loopTyping(heroName, heroNames, 0, 150, 1000);
+    }
+
+    // ====== HEADER NAME (menor) ======
+    const headerNames = ["Nilson", "Snillx"];
+    const headerName = document.getElementById("header-name");
+
+    if (headerName) {
+        headerName.textContent = "";
+        loopTyping(headerName, headerNames, 0, 100, 800);
+    }
 });
+
+// Função genérica para digitar/apagar nomes
+function loopTyping(element, namesArray, index, typingSpeed, pauseTime) {
+    const name = namesArray[index];
+
+    // Digitar
+    let i = 0;
+    function type() {
+        if (i < name.length) {
+            element.textContent += name.charAt(i++);
+            setTimeout(type, typingSpeed);
+        } else {
+            setTimeout(erase, pauseTime);
+        }
+    }
+
+    // Apagar
+    function erase() {
+        let text = element.textContent;
+        let j = text.length;
+        function removing() {
+            if (j > 0) {
+                element.textContent = text.substring(0, j - 1);
+                j--;
+                setTimeout(removing, typingSpeed / 2);
+            } else {
+                loopTyping(element, namesArray, (index + 1) % namesArray.length, typingSpeed, pauseTime);
+            }
+        }
+        removing();
+    }
+
+    type();
+}
+
+// ========================
+// Restante do seu script original
+// ========================
 
 function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
@@ -52,27 +107,9 @@ function initScrollAnimations() {
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     elements.forEach((el, i) => {
         el.classList.add('fade-in');
-        el.style.transitionDelay = `${i * 0.1}s`;
+        el.style.transitionDelay = `${i * 0.05}s`;
         observer.observe(el);
     });
-}
-
-function initTypewriter() {
-    const heroTitle = document.querySelector('.hero-title');
-    if (!heroTitle) return;
-    const text = heroTitle.textContent;
-    heroTitle.textContent = '';
-    let i = 0;
-    function typeWriter() {
-        if (i < text.length) {
-            heroTitle.textContent += text.charAt(i++);
-            setTimeout(typeWriter, 100);
-        } else {
-            heroTitle.style.borderRight = '2px solid var(--accent-color)';
-            setTimeout(() => heroTitle.style.borderRight = 'none', 1000);
-        }
-    }
-    setTimeout(typeWriter, 500);
 }
 
 function initParallax() {
