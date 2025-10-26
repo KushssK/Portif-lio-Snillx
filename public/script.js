@@ -6,17 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initCardHoverEffects();
     showLoading();
-
-    // ====== HERO NAME ======
     const heroNames = ["Nilson", "Snillx"];
     const heroName = document.getElementById("hero-name");
 
     if (heroName) {
-        heroName.textContent = ""; // garante que comece vazio
+        heroName.textContent = ""; 
         loopTyping(heroName, heroNames, 0, 150, 1000);
     }
-
-    // ====== HEADER NAME (menor) ======
     const headerNames = ["Nilson", "Snillx"];
     const headerName = document.getElementById("header-name");
 
@@ -25,12 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         loopTyping(headerName, headerNames, 0, 100, 800);
     }
 });
-
-// Função genérica para digitar/apagar nomes
 function loopTyping(element, namesArray, index, typingSpeed, pauseTime) {
     const name = namesArray[index];
-
-    // Digitar
     let i = 0;
     function type() {
         if (i < name.length) {
@@ -40,8 +32,6 @@ function loopTyping(element, namesArray, index, typingSpeed, pauseTime) {
             setTimeout(erase, pauseTime);
         }
     }
-
-    // Apagar
     function erase() {
         let text = element.textContent;
         let j = text.length;
@@ -59,10 +49,6 @@ function loopTyping(element, namesArray, index, typingSpeed, pauseTime) {
 
     type();
 }
-
-// ========================
-// Restante do seu script original
-// ========================
 
 function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
