@@ -38,7 +38,7 @@ function loopTyping(element, namesArray, index, typingSpeed, pauseTime) {
         function removing() {
             if (j > 0) {
                 element.textContent = text.substring(0, j - 1);
-                j--;
+                j--
                 setTimeout(removing, typingSpeed / 2);
             } else {
                 loopTyping(element, namesArray, (index + 1) % namesArray.length, typingSpeed, pauseTime);

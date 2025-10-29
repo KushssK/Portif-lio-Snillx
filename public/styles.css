@@ -134,10 +134,12 @@ body {
 
 .experience-section,
 .skills-section,
-.hall-of-fame-section,
 .certifications-section,
 .contact-section {
     padding: 100px 0;
+}
+.hall-of-fame-section {
+    padding: 60px 0;
 }
 .timeline-item,
 .cert-card,
