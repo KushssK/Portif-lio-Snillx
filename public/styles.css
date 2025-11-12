@@ -17,6 +17,7 @@
     --shadow-hover: 0 2px 8px rgba(0,0,0,0.5);
     --transition-speed: 0.2s; 
 }
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
@@ -24,11 +25,13 @@ body {
     background-color: var(--background-color);
     font-size: 16px;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 }
+
 .navbar {
     position: fixed;
     top: 0;
@@ -83,6 +86,7 @@ body {
     background: var(--accent-color);
     transition: width var(--transition-speed) ease-in-out;
 }
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -138,9 +142,11 @@ body {
 .contact-section {
     padding: 100px 0;
 }
+
 .hall-of-fame-section {
     padding: 60px 0;
 }
+
 .timeline-item,
 .cert-card,
 .skill-card,
@@ -209,10 +215,12 @@ body {
     position: absolute;
     left: 0;
 }
+
 .skill-card,
 .achievement-card {
     margin-bottom: 32px;
 }
+
 .certifications-grid {
     display: flex;
     flex-direction: column;
@@ -223,11 +231,13 @@ body {
     display: flex;
     align-items: center;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .cert-card-horizontal img.rec-image {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
     object-fit: cover;
     border-radius: 12px;
     flex-shrink: 0;
@@ -240,6 +250,7 @@ body {
 
 .cert-card-horizontal .cert-text {
     flex: 1;
+    min-width: 200px;
 }
 
 .cert-card-horizontal .cert-text h3 {
@@ -253,6 +264,7 @@ body {
     line-height: 1.5;
     color: var(--text-light);
 }
+
 .contact-section {
     background: #1a1a1a;
 }
@@ -293,6 +305,7 @@ body {
     font-size: 14px;
     color: var(--text-light);
 }
+
 .footer {
     background: #121212;
     color: var(--primary-color);
@@ -304,6 +317,8 @@ body {
 .footer:hover {
     transform: translateY(-2px);
 }
+
+/* 📱 Responsividade */
 @media (max-width: 768px) {
     .cert-card-horizontal {
         flex-direction: column;
@@ -312,6 +327,7 @@ body {
     }
 
     .cert-card-horizontal img.rec-image {
+        max-width: 100%;
         width: 100%;
         height: auto;
         margin-bottom: 12px;
