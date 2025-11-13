@@ -3,11 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 :root {
     --primary-color: #ffffff;
     --secondary-color: #aaaaaa;
-    --accent-color: #6366f1; 
+    --accent-color: #6366f1;
     --background-color: #121212;
     --text-color: #e0e0e0;
     --text-light: #bbbbbb;
@@ -17,7 +16,6 @@
     --shadow-hover: 0 2px 8px rgba(0,0,0,0.5);
     --transition-speed: 0.2s;
 }
-
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
@@ -26,13 +24,11 @@ body {
     font-size: 16px;
     padding-top: 80px;
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 }
-
 .navbar {
     position: fixed;
     top: 0;
@@ -44,7 +40,6 @@ body {
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
 }
-
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -52,18 +47,15 @@ body {
     height: 70px;
     padding: 0 24px;
 }
-
 .nav-brand {
     font-size: 20px;
     font-weight: 600;
     color: var(--primary-color);
 }
-
 .nav-links {
     display: flex;
     gap: 32px;
 }
-
 .nav-link {
     color: var(--text-color);
     text-decoration: none;
@@ -71,13 +63,11 @@ body {
     transition: color var(--transition-speed) ease-in-out, transform var(--transition-speed) ease-in-out;
     position: relative;
 }
-
 .nav-link:hover,
 .nav-link.active {
     color: var(--accent-color);
     transform: translateY(-2px);
 }
-
 .nav-link.active::after {
     content: '';
     position: absolute;
@@ -88,7 +78,6 @@ body {
     background: var(--accent-color);
     transition: width var(--transition-speed) ease-in-out;
 }
-
 .hero {
     min-height: 100vh;
     display: flex;
@@ -96,35 +85,29 @@ body {
     justify-content: center;
     background: linear-gradient(135deg, #1a1a1a 0%, #121212 100%);
 }
-
 .hero-container {
     text-align: center;
     padding: 0 24px;
     transition: transform var(--transition-speed) ease-in-out;
 }
-
 .hero-container:hover {
     transform: translateY(-2px);
 }
-
 .hero-title {
     font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 700;
     color: var(--primary-color);
 }
-
 .hero-subtitle {
     font-size: clamp(1.25rem, 3vw, 1.75rem);
     color: var(--text-color);
     font-weight: 500;
     margin-bottom: 8px;
 }
-
 .hero-description {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     color: var(--text-light);
 }
-
 .section-title {
     font-size: clamp(2rem,5vw,3rem);
     font-weight: 700;
@@ -133,22 +116,18 @@ body {
     margin-bottom: 60px;
     transition: transform var(--transition-speed) ease-in-out;
 }
-
 .section-title:hover {
     transform: translateY(-2px);
 }
-
 .experience-section,
 .skills-section,
 .certifications-section,
 .contact-section {
     padding: 100px 0;
 }
-
 .hall-of-fame-section {
     padding: 60px 0;
 }
-
 .timeline-item,
 .cert-card,
 .skill-card,
@@ -163,7 +142,6 @@ body {
     transition: transform var(--transition-speed) ease-in-out;
     will-change: transform;
 }
-
 .timeline-item:hover,
 .cert-card:hover,
 .skill-card:hover,
@@ -173,35 +151,29 @@ body {
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
-
 .timeline-item {
     display: flex;
     gap: 20px;
     margin-bottom: 32px;
 }
-
 .timeline-title {
     font-size: 20px;
     font-weight: 600;
     color: var(--primary-color);
 }
-
 .timeline-position {
     font-size: 16px;
     font-weight: 500;
     color: var(--text-color);
 }
-
 .timeline-period {
     font-size: 14px;
     color: var(--text-light);
     margin-bottom: 12px;
 }
-
 .timeline-description {
     list-style: none;
 }
-
 .timeline-description li {
     font-size: 15px;
     line-height: 1.6;
@@ -210,14 +182,12 @@ body {
     padding-left: 20px;
     position: relative;
 }
-
 .timeline-description li::before {
     content: '•';
     color: var(--text-color);
     position: absolute;
     left: 0;
 }
-
 .timeline-description img {
     width: 100%;
     max-width: 500px;
@@ -226,25 +196,21 @@ body {
     border: 2px solid var(--border-color);
     margin-top: 10px;
 }
-
 .skill-card,
 .achievement-card {
     margin-bottom: 32px;
 }
-
 .certifications-grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
 .cert-card-horizontal {
     display: flex;
     align-items: center;
     gap: 16px;
     flex-wrap: wrap;
 }
-
 .cert-card-horizontal img.rec-image {
     width: 100%;
     max-width: 200px;
@@ -254,49 +220,40 @@ body {
     flex-shrink: 0;
     transition: transform var(--transition-speed) ease-in-out;
 }
-
 .cert-card-horizontal img.rec-image:hover {
     transform: translateY(-2px);
 }
-
 .cert-card-horizontal .cert-text {
     flex: 1;
     min-width: 200px;
 }
-
 .cert-card-horizontal .cert-text h3 {
     font-size: 1.4rem;
     margin-bottom: 0.3rem;
     color: var(--text-color);
 }
-
 .cert-card-horizontal .cert-text p {
     font-size: 14px;
     line-height: 1.5;
     color: var(--text-light);
 }
-
 .contact-section {
     background: #1a1a1a;
 }
-
 .contact-content {
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
 }
-
 .contact-description {
     margin-bottom: 32px;
     color: var(--text-color);
 }
-
 .contact-info {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
 .contact-link {
     display: flex;
     align-items: center;
@@ -307,16 +264,13 @@ body {
     text-decoration: none;
     color: var(--text-color);
 }
-
 .contact-link i {
     color: var(--accent-color);
 }
-
 .contact-footer {
     font-size: 14px;
     color: var(--text-light);
 }
-
 .footer {
     background: #121212;
     color: var(--primary-color);
@@ -324,50 +278,41 @@ body {
     padding: 32px 0;
     transition: transform var(--transition-speed) ease-in-out;
 }
-
 .footer:hover {
     transform: translateY(-2px);
 }
-
 @media (max-width: 1024px) {
     .timeline-description img {
         max-width: 100%;
     }
-
     .cert-card-horizontal {
         flex-direction: column;
         text-align: center;
     }
-
     .cert-card-horizontal img.rec-image {
         width: 100%;
         max-width: 90%;
     }
-
     .cert-card-horizontal .cert-text {
         margin-top: 12px;
     }
 }
-
 @media (max-width: 768px) {
     body { padding-top: 70px; }
     .nav-container { height: 60px; }
     .nav-brand { font-size: 18px; }
-    .nav-links { gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .nav-links { gap: 16px; flex-wrap: nowrap; justify-content: center; min-width: 0; overflow-x: auto; }
     .nav-link { font-size: 13px; }
-
     .timeline-item {
         flex-direction: column;
         gap: 12px;
         padding: 16px;
     }
-
     .experience-section,
     .certifications-section,
     .skills-section,
     .hall-of-fame-section,
     .contact-section { padding: 60px 0; }
-
     .cert-card-horizontal img.rec-image {
         max-width: 100%;
     }
