@@ -317,3 +317,124 @@ body {
         max-width: 100%;
     }
 }
+
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all var(--transition-speed) ease;
+}
+.nav-toggle:hover {
+    background: var(--hover-bg);
+}
+.nav-toggle i {
+    font-size: 18px;
+    color: var(--text-color);
+    transition: transform var(--transition-speed) ease;
+}
+.nav-toggle.active i {
+    transform: rotate(180deg);
+}
+
+.nav-drawer {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(18, 18, 18, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-right: 1px solid var(--border-color);
+    z-index: 999;
+    transition: left 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.nav-drawer.open {
+    left: 0;
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+.drawer-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 18px;
+}
+.drawer-close {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    transition: all var(--transition-speed) ease;
+}
+.drawer-close:hover {
+    background: var(--hover-bg);
+    color: var(--primary-color);
+}
+
+.drawer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+.drawer-link {
+    display: block;
+    padding: 14px 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 12px;
+    transition: all var(--transition-speed) ease;
+}
+.drawer-link:hover,
+.drawer-link.active {
+    background: var(--hover-bg);
+    color: var(--accent-color);
+    transform: translateX(4px);
+}
+
+.drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.drawer-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none; 
+    }
+    .nav-container {
+        justify-content: space-between;
+    }
+}

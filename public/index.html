@@ -6,13 +6,32 @@
     <title>Nilson (Snillsx) - Portfólio</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
                 <span></span>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="nav-drawer">
+                <div class="drawer-header">
+                    <span class="drawer-title">Menu</span>
+                    <button class="drawer-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <ul class="drawer-links">
+                    <li><a href="#home" class="drawer-link">Início</a></li>
+                    <li><a href="#experience" class="drawer-link">Experiência</a></li>
+                    <li><a href="#skills" class="drawer-link">Habilidades</a></li>
+                    <li><a href="#hall-of-fame" class="drawer-link">Hall da Fama</a></li>
+                    <li><a href="#recognition" class="drawer-link">Cartas de Reconhecimento</a></li>
+                    <li><a href="#contact" class="drawer-link">Contato</a></li>
+                </ul>
             </div>
             <div class="nav-links">
                 <a href="#home" class="nav-link">Início</a>
@@ -24,7 +43,6 @@
             </div>
         </div>
     </nav>
-
     <main>
         <section id="home" class="hero">
             <div class="hero-container">
@@ -35,7 +53,6 @@
                 </div>
             </div>
         </section>
-
         <section id="experience" class="experience-section">
             <div class="container">
                 <h2 class="section-title">Experiência</h2>
@@ -53,7 +70,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <h3 class="timeline-title">ReservaInk - Freelance</h3>
@@ -66,7 +82,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <h3 class="timeline-title">GreatPages - Freelance</h3>
@@ -82,14 +97,13 @@
                 </div>
             </div>
         </section>
-
         <section id="skills" class="skills-section">
             <div class="container">
                 <h2 class="section-title">Habilidades</h2>
                 <div class="skills-grid">
                     <div class="skill-card">
                         <h3>Offensive Security</h3>
-                        <p>Pentest de aplicações web 
+                        <p>Pentest de aplicações web
                             (black/gray/white-box):
                             exploração manual + automação.
                         </p>
@@ -137,14 +151,13 @@
                 </div>
             </div>
         </section>
-
         <section id="hall-of-fame" class="hall-of-fame-section">
             <div class="container">
                 <h2 class="section-title">Hall da Fama</h2>
                 <div class="achievements-grid">
                     <div class="achievement-card">
                         <h3>Nokia</h3>
-                        <a href="https://www.nokia.com/notices/responsible-disclosure/" 
+                        <a href="https://www.nokia.com/notices/responsible-disclosure/"
                            class="hall-of-fame">
                            Responsible Disclosure
                         </a>                        
@@ -152,7 +165,7 @@
                     </div>
                     <div class="achievement-card">
                         <h3>SAP</h3>
-                        <a href="https://support.sap.com/en/my-support/knowledge-base/security-notes-news/credits-for-security-researchers.html?anchorId=M3" 
+                        <a href="https://support.sap.com/en/my-support/knowledge-base/security-notes-news/credits-for-security-researchers.html?anchorId=M3"
                         class="hall-of-fame">
                         Credits for Security Researchers
                      </a>  
@@ -161,38 +174,31 @@
                 </div>
             </div>
         </section>
-
-        <!-- Cartas de Reconhecimento -->
         <section id="recognition" class="certifications-section">
             <div class="container">
                 <h2 class="section-title">Cartas de Reconhecimento</h2>
                 <div class="certifications-grid">
-
                     <div class="cert-card-horizontal">
                         <img class="rec-image" src="imgs/NASA.jpeg.jpeg" alt="Imagem NASA">
                         <div class="cert-text">
                             <h3>NASA</h3>
                         </div>
                     </div>
-
                     <div class="cert-card-horizontal">
                         <img class="rec-image" src="imgs/Pastu.jpeg.jpeg" alt="Imagem Reserva INK">
                         <div class="cert-text">
                             <h3>Reserva INK</h3>
                         </div>
                     </div>
-
                     <div class="cert-card-horizontal">
                         <img class="rec-image" src="imgs/Pastu.jpeg.jpeg" alt="Imagem Pastu">
                         <div class="cert-text">
                             <h3>Pastu</h3>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-
         <section id="contact" class="contact-section">
             <div class="container">
                 <h2 class="section-title">Contato</h2>
@@ -222,13 +228,11 @@
             </div>
         </section>
     </main>
-
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Nilson. Todos os direitos reservados.</p>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
