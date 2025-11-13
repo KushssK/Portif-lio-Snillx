@@ -24,6 +24,7 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     font-size: 16px;
+    padding-top: 80px;
 }
 
 .container {
@@ -49,6 +50,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    padding: 0 24px;
 }
 
 .nav-brand {
@@ -348,6 +350,7 @@ body {
 }
 
 @media (max-width: 768px) {
+    body { padding-top: 70px; }
     .nav-container { height: 60px; }
     .nav-brand { font-size: 18px; }
     .nav-links { gap: 16px; flex-wrap: wrap; justify-content: center; }
